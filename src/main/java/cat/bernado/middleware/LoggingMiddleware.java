@@ -1,6 +1,6 @@
-package cat.orbeji.middleware;
+package cat.bernado.middleware;
 
-import cat.orbeji.message.Message;
+import cat.bernado.message.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

@@ -1,8 +1,8 @@
-package cat.orbeji.query;
+package cat.bernado.query;
 
-import cat.orbeji.message.MessageHandlerFinder;
-import cat.orbeji.middleware.Middleware;
-import cat.orbeji.middleware.MiddlewareChainBuilder;
+import cat.bernado.message.MessageHandlerFinder;
+import cat.bernado.middleware.Middleware;
+import cat.bernado.middleware.MiddlewareChainBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

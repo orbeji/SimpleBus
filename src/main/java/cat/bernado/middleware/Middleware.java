@@ -1,6 +1,6 @@
-package cat.orbeji.middleware;
+package cat.bernado.middleware;
 
-import cat.orbeji.message.Message;
+import cat.bernado.message.Message;
 
 import java.util.function.Function;
 

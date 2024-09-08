@@ -1,8 +1,8 @@
-package cat.orbeji.command;
+package cat.bernado.command;
 
-import cat.orbeji.message.MessageHandlerFinder;
-import cat.orbeji.middleware.Middleware;
-import cat.orbeji.middleware.MiddlewareChainBuilder;
+import cat.bernado.message.MessageHandlerFinder;
+import cat.bernado.middleware.Middleware;
+import cat.bernado.middleware.MiddlewareChainBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

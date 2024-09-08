@@ -1,6 +1,6 @@
-package cat.orbeji.query;
+package cat.bernado.query;
 
-import cat.orbeji.message.MessageHandler;
+import cat.bernado.message.MessageHandler;
 
 public interface QueryHandler<Q extends Query, R> extends MessageHandler {
     R execute(Q query) throws Exception;

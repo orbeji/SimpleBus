@@ -1,4 +1,4 @@
-package cat.orbeji.message;
+package cat.bernado.message;
 
 public interface MessageHandler {
 }

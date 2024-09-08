@@ -1,4 +1,4 @@
-package cat.orbeji.middleware;
+package cat.bernado.middleware;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

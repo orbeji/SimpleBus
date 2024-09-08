@@ -1,6 +1,6 @@
-package cat.orbeji.command;
+package cat.bernado.command;
 
-import cat.orbeji.message.MessageHandler;
+import cat.bernado.message.MessageHandler;
 
 public interface CommandHandler <C extends Command> extends MessageHandler {
     void execute(C command) throws Exception;

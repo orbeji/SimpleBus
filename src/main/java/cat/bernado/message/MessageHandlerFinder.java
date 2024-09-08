@@ -1,4 +1,4 @@
-package cat.orbeji.message;
+package cat.bernado.message;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
