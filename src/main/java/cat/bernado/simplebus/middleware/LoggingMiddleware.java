@@ -1,6 +1,6 @@
-package cat.bernado.middleware;
+package cat.bernado.simplebus.middleware;
 
-import cat.bernado.message.Message;
+import cat.bernado.simplebus.message.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

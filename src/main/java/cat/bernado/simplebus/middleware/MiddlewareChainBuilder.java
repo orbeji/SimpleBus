@@ -1,6 +1,6 @@
-package cat.bernado.middleware;
+package cat.bernado.simplebus.middleware;
 
-import cat.bernado.message.Message;
+import cat.bernado.simplebus.message.Message;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,13 +18,7 @@ public class MiddlewareChainBuilder {
         for (int i = middlewares.size() - 1; i >= 0; i--) {
             Middleware middleware = middlewares.get(i);
             Function<M, R> next = chain;
-            chain = (command) -> {
-                try {
-                    return (R) middleware.execute(command, next);
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            };
+            chain = command -> (R) middleware.execute(command, next);
         }
         return chain;
     }

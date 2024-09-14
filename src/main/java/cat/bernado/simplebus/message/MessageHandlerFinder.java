@@ -1,4 +1,4 @@
-package cat.bernado.message;
+package cat.bernado.simplebus.message;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;

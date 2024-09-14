@@ -1,10 +1,8 @@
-package cat.bernado.query;
+package cat.bernado.simplebus.query;
 
-import cat.bernado.message.MessageHandlerFinder;
-import cat.bernado.middleware.Middleware;
-import cat.bernado.middleware.MiddlewareChainBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import cat.bernado.simplebus.message.MessageHandlerFinder;
+import cat.bernado.simplebus.middleware.Middleware;
+import cat.bernado.simplebus.middleware.MiddlewareChainBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +11,6 @@ import java.util.function.Function;
 @Service
 public class SimpleQueryBus implements QueryBus {
     private final MessageHandlerFinder messageHandlerFinder;
-    private static final Logger logger = LoggerFactory.getLogger(SimpleQueryBus.class);
     private final MiddlewareChainBuilder middlewareChainBuilder;
     private final List<Middleware> middlewares;
 

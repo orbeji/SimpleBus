@@ -1,6 +1,7 @@
 plugins {
 	id 'java'
 	id "org.sonarqube" version "5.0.0.4638"
+	id 'maven-publish'
 }
 
 group = 'cat.bernado'
@@ -20,6 +21,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 	implementation 'io.github.classgraph:classgraph:4.8.154'
 	implementation 'org.springframework:spring-context:6.1.12'
+	implementation 'org.springframework.boot:spring-boot-autoconfigure:3.3.3'
 	implementation 'org.slf4j:slf4j-api:1.7.25'
 	testImplementation 'org.mockito:mockito-core:3.7.7'
 	testImplementation 'org.mockito:mockito-junit-jupiter:3.7.7'

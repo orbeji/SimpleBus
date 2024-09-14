@@ -1,8 +1,8 @@
-package cat.bernado.command;
+package cat.bernado.simplebus.command;
 
-import cat.bernado.message.MessageHandlerFinder;
-import cat.bernado.middleware.Middleware;
-import cat.bernado.middleware.MiddlewareChainBuilder;
+import cat.bernado.simplebus.message.MessageHandlerFinder;
+import cat.bernado.simplebus.middleware.Middleware;
+import cat.bernado.simplebus.middleware.MiddlewareChainBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
