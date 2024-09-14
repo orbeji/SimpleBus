@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.function.Function;
 
+/**
+ * Builds the execution chain of all the Middlewares and the MessageHandler
+ */
 @Component
 public class MiddlewareChainBuilder {
 

@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 
 import java.util.function.Function;
 
+/**
+ * Middleware example that logs every Message received in the Bus
+ * @param <M>
+ * @param <R>
+ */
 @Component
 public class LoggingMiddleware<M extends Message, R> implements Middleware<M, R> {
 

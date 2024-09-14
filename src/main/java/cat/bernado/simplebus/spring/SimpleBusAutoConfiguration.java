@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
+/**
+ * Configuration class that contains the Spring configuration of all the needed services to use this project
+ */
 @Configuration
 public class SimpleBusAutoConfiguration {
 

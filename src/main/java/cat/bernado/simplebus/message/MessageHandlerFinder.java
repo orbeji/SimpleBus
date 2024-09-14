@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 
+/**
+ * Helper class to find the corresponding MessageHandler Spring service of a specific Message
+ */
 @Service
 public class MessageHandlerFinder {
     private final ApplicationContext applicationContext;
