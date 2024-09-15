@@ -12,7 +12,7 @@ import java.util.HashMap;
 @Service
 public class MessageHandlerFinder {
     private final ApplicationContext applicationContext;
-    HashMap<String, String> cache;
+    private HashMap<String, String> cache;
 
     public MessageHandlerFinder(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;

@@ -21,6 +21,7 @@ public class LoggingMiddleware<M extends Message, R> implements Middleware<M, R>
     public R execute(M message, Function<M, R> next) {
         logger.info(String.format("Received %s", message.getClass().getName()), message);
         try {
+            //Important! pass the execution to the next layer
             R result = next.apply(message);
             logger.info("Command handled successfully");
             return result;
