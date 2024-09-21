@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id "org.sonarqube" version "5.0.0.4638"
 	id 'maven-publish'
+	id 'org.jreleaser' version '1.14.0'
 }
 
 group = 'cat.bernado'
@@ -9,6 +10,8 @@ version = '0.0.1'
 
 java {
 	sourceCompatibility = '21'
+	withJavadocJar()
+	withSourcesJar()
 }
 
 repositories {
@@ -28,4 +31,75 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId = 'cat.bernado'
+			artifactId = 'simplebus'
+
+			from components.java
+
+			pom {
+				name = 'SimpleBus'
+				description = 'A simple command bus pattern implementation for Spring Boot'
+				url = 'https://github.com/orbeji/SimpleBus'
+				inceptionYear = '2024'
+				licenses {
+					license {
+						name = 'MIT'
+						url = 'https://choosealicense.com/licenses/mit/'
+					}
+				}
+				developers {
+					developer {
+						id = 'orbeji'
+						name = 'orbeji'
+					}
+				}
+				scm {
+					connection = 'scm:git:https://github.com/orbeji/SimpleBus.git'
+					developerConnection = 'scm:git:ssh://github.com/orbeji/SimpleBus.git'
+					url = 'http://github.com/orbeji/SimpleBus'
+				}
+			}
+		}
+	}
+
+	repositories {
+		maven {
+			url = layout.buildDirectory.dir('staging-deploy')
+		}
+	}
+}
+
+jreleaser {
+	signing {
+		active = 'ALWAYS'
+		armored = true
+	}
+	deploy {
+		maven {
+			nexus2 {
+				'maven-central' {
+					active = 'ALWAYS'
+					url = 'https://s01.oss.sonatype.org/service/local'
+					snapshotUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+					closeRepository = true
+					releaseRepository = true
+					stagingRepository('build/staging-deploy')
+				}
+			}
+			/* Portal Publisher API
+            mavenCentral {
+                sonatype {
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository('target/staging-deploy')
+                }
+            }
+            */
+		}
+	}
 }
