@@ -56,7 +56,17 @@ This project provides a simple implementation of the **Command Bus** and **Query
 To integrate the Command and Query Bus into your Spring Boot application:
 
 ### 1. Importing the project
-**TODO**
+You can find the project here https://central.sonatype.com/artifact/cat.bernado/simplebus
+#### Gradle
+```implementation 'cat.bernado:simplebus:0.0.1'```
+#### Maven
+```xml
+<dependency>
+    <groupId>cat.bernado</groupId>
+    <artifactId>simplebus</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
 
 ### 2. Implementing a Command
 A command represents an action or a request for changing the state of the application. For example, creating a new user.
@@ -176,9 +186,9 @@ Simply implement the Middleware interface and register them in the configuration
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Publish to Maven Central Repository
+- [x] Publish to Maven Central Repository
 - [ ] Automate creation of jar for every release
-- [ ] Finish README.md
+- [x] Finish README.md
 - [ ] Configure GitHub Actions to execute the tests on every change
 - [ ] Create Event Bus
     - [ ] RabbitMQ transport adapter
